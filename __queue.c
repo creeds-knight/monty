@@ -8,9 +8,9 @@
 
 void __queue(stack_t **head, unsigned int line_no)
 {
-    (void)head;
-    (void)line_no;
-    data.stk_or_que = 1;
+	(void)head;
+	(void)line_no;
+	data.stk_or_que = 1;
 }
 /**
  * add_queue - A function to add a node to the tail of the queue
@@ -21,29 +21,29 @@ void __queue(stack_t **head, unsigned int line_no)
 
 void add_queue(stack_t **head, int n)
 {
-    stack_t *newnode, *tmp;
+	stack_t *newnode, *tmp;
 
-    tmp = *head;
-    newnode = malloc(sizeof(stack_t));
-    if (newnode == NULL)
-    {
-        perror("Malloc Error\n");
-    }
-    newnode->n = n;
-    newnode->next = NULL;
-    if (tmp)
-    {
-        while (tmp->next)
-            tmp = tmp->next;
-    }
-    if (!tmp)
-    {
-        *head = newnode;
-        newnode->prev = NULL;
-    }
-    else
-    {
-        tmp->next = newnode;
-        newnode->prev = tmp;
-    }
+	tmp = *head;
+	newnode = malloc(sizeof(stack_t));
+	if (newnode == NULL)
+	{
+		perror("Malloc Error\n");
+	}
+	newnode->n = n;
+	newnode->next = NULL;
+	if (tmp)
+	{
+		while (tmp->next)
+			tmp = tmp->next;
+	}
+	if (!tmp)
+	{
+		*head = newnode;
+		newnode->prev = NULL;
+	}
+	else
+	{
+		tmp->next = newnode;
+		newnode->prev = tmp;
+	}
 }

@@ -8,9 +8,9 @@
 
 void __stack(stack_t **head, unsigned int line_no)
 {
-    (void)head;
-    (void)line_no;
-    data.stk_or_que = 0;
+	(void)head;
+	(void)line_no;
+	data.stk_or_que = 0;
 }
 
 /**
@@ -22,21 +22,21 @@ void __stack(stack_t **head, unsigned int line_no)
 
 void add_node(stack_t **head, int n)
 {
-    stack_t *newnode, *tmp;
+	stack_t *newnode, *tmp;
 
-    tmp = *head;
-    newnode = malloc(sizeof(stack_t));
-    if (newnode == NULL)
-    {
-        perror("Malloc Error");
-        exit(0);
-    }
-    if (tmp)
-        tmp->prev = newnode;
-    newnode->n = n;
-    newnode->next = *head;
-    newnode->prev = NULL;
-    *head = newnode;
+	tmp = *head;
+	newnode = malloc(sizeof(stack_t));
+	if (newnode == NULL)
+	{
+		perror("Malloc Error");
+		exit(0);
+	}
+	if (tmp)
+		tmp->prev = newnode;
+	newnode->n = n;
+	newnode->next = *head;
+	newnode->prev = NULL;
+	*head = newnode;
 }
 
 /**
@@ -46,13 +46,13 @@ void add_node(stack_t **head, int n)
 
 void __freestack(stack_t *head)
 {
-    stack_t *tmp;
+	stack_t *tmp;
 
-    tmp = head;
-    while (head)
-    {
-        tmp = head->next;
-        free(head);
-        head = tmp;
-    }
+	tmp = head;
+	while (head)
+	{
+		tmp = head->next;
+		free(head);
+		head = tmp;
+	}
 }
