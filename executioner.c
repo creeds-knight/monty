@@ -1,6 +1,6 @@
 #include "monty.h"
 /**
- * executioner - A function that executes the opcode
+ * exe - A function that executes the opcode
  * @stack: The pointer to the head of the linked list
  * @line_no: Current number of line
  * @file : A pointer to the monty file
@@ -10,7 +10,12 @@
 
 int exe(char *content, stack_t **stack, unsigned int line_no, FILE *file)
 {
-	instruction_t opdata[] = {{"push", __push}, {"pall", __pall}};
+	instruction_t opdata[] = {{"push", __push}, {"pall", __pall},
+	{"pint", __pint},
+	{"pop", __pop},
+	{"swap", __swap},
+	{"add", __add},
+	{"nop", __nop}};
 	unsigned int i = 0;
 	char *op;
 

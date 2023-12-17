@@ -69,4 +69,9 @@ int exe(char *content, stack_t **stack, unsigned int line_no, FILE *file);
 void __push(stack_t **head, unsigned int line_no);
 void __pall(stack_t **head, unsigned int line_no);
 void __freestack(stack_t *head);
+void __pint(stack_t **head, unsigned int line_no);
+void __pop(stack_t **head, unsigned int line_no);
+void __swap(stack_t **head, unsigned int line_no);
+void __add(stack_t **head, unsigned int line_no);
+void __nop(stack_t **head, unsigned int line_no);
 #endif
