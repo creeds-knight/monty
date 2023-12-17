@@ -58,7 +58,14 @@ void __div(stack_t **head, unsigned int line_no)
 		exit(EXIT_FAILURE);
 	}
 	tmp = *head;
-	m = tmp->n / tmp->next->n;
+	if (tmp->n == 0)
+	{
+		fprintf(stderr, "L%d: division by zero\n", line_no);
+		fclose(data.file);
+		free(data.content);
+		__freestack(*head);
+		exit(EXIT_FAILURE);
+	}m = tmp->n / tmp->next->n;
 	tmp->next->n = m;
 	*head = tmp->next;
 	free(tmp);
@@ -124,7 +131,7 @@ void __mod(stack_t **head, unsigned int line_no)
 	tmp = *head;
 	if (tmp->n == 0)
 	{
-		fprintf(stderr, "L%d: can't mod, stack too short\n", line_no);
+		fprintf(stderr, "L%d: division by zero\n", line_no);
 		fclose(data.file);
 		free(data.content);
 		__freestack(*head);
