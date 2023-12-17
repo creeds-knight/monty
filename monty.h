@@ -74,4 +74,12 @@ void __pop(stack_t **head, unsigned int line_no);
 void __swap(stack_t **head, unsigned int line_no);
 void __add(stack_t **head, unsigned int line_no);
 void __nop(stack_t **head, unsigned int line_no);
+void __sub(stack_t **head, unsigned int line_no);
+void __div(stack_t **head, unsigned int line_no);
+void __mul(stack_t **head, unsigned int line_no);
+void __mod(stack_t **head, unsigned int line_no);
+
+
+
+
 #endif

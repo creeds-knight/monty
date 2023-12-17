@@ -15,6 +15,10 @@ int exe(char *content, stack_t **stack, unsigned int line_no, FILE *file)
 	{"pop", __pop},
 	{"swap", __swap},
 	{"add", __add},
+	{"sub", __sub},
+	{"div", __div},
+	{"mul", __mul},
+	{"mod", __mod},
 	{"nop", __nop}};
 	unsigned int i = 0;
 	char *op;
