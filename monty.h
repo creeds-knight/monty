@@ -78,8 +78,8 @@ void __sub(stack_t **head, unsigned int line_no);
 void __div(stack_t **head, unsigned int line_no);
 void __mul(stack_t **head, unsigned int line_no);
 void __mod(stack_t **head, unsigned int line_no);
-
-
-
-
+void __pchar(stack_t **head, unsigned int line_no);
+void __pstr(stack_t **head, unsigned int line_no);
+void __rotl(stack_t **head, unsigned int line_no);
+void __rotr(stack_t **head, unsigned int line_no);
 #endif

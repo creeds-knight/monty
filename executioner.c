@@ -11,15 +11,13 @@
 int exe(char *content, stack_t **stack, unsigned int line_no, FILE *file)
 {
 	instruction_t opdata[] = {{"push", __push}, {"pall", __pall},
-	{"pint", __pint},
-	{"pop", __pop},
-	{"swap", __swap},
-	{"add", __add},
-	{"sub", __sub},
-	{"div", __div},
-	{"mul", __mul},
-	{"mod", __mod},
-	{"nop", __nop}};
+	{"pint", __pint}, {"pop", __pop}, {"swap", __swap},
+	{"add", __add}, {"sub", __sub}, {"div", __div},
+	{"mul", __mul},	{"mod", __mod},
+	{"nop", __nop},	{"pchar", __pchar},
+	{"pstr", __pstr}, {"rotl", __rotl},
+	{"rotr", __rotr}, {"queue", __queue},
+	{"stack", __stack}};
 	unsigned int i = 0;
 	char *op;
 
